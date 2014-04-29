@@ -36,6 +36,8 @@
     "nconf": "~0.6.9",
     "hiredis": "~0.1.16",
     "node-logentries": "~0.1.4",
-    "rrule": "~2.0.1"
+    "rrule": "~2.0.1",
+    "requirejs": "~2.1.11",
+    "winston": "~0.7.3"
   }
 }
