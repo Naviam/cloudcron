@@ -5,5 +5,5 @@ module.exports = function (app) {
 	var mongoose = require('mongoose');
 	var schema = require('../model/schema');
 
-	app.get('/', views.index);
+	app.get('/api', function(res,req) { return res.json(); });
 };

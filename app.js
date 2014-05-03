@@ -2,6 +2,9 @@ var express = require('express');
 var app = express();
 var routes = require('./routes')(app);
 
+app.use(express.static(__dirname + '/public'));
+app.use('/static',  express.static(__dirname + '/bower_components'));
+
 var passport = require('passport')
   , GoogleStrategy = require('passport-google').Strategy;
 
@@ -11,9 +14,6 @@ passport.use(new GoogleStrategy({
   },
   function(identifier, profile, done) {
 	done(err, user);
-    // User.findOrCreate({ openId: identifier }, function(err, user) {
-      
-    // });
   }
 ));
 
@@ -28,6 +28,10 @@ app.get('/auth/google', passport.authenticate('google'));
 app.get('/auth/google/return', 
   passport.authenticate('google', { successRedirect: '/',
                                     failureRedirect: '/login' }));
+
+app.get('/', function (req, res) {
+  res.sendfile(__dirname + '/index.html');
+});
 
 var server = app.listen(3000, function() {
     console.log('Listening on port %d', server.address().port);
