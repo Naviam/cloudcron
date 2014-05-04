@@ -11,12 +11,16 @@ App.Router.map(function() {
   });
 });
 
-App.IndexController = Ember.Controller.extend({
-  productsCount: 6,
-  logo: 'images/logo-small.png',
-  time: function() {
-    return (new Date()).toDateString();
-  }.property()
+App.IndexController = Ember.ArrayController.extend({
+  jobsCount: function() {
+	return this.get('length');
+  }.property('length')
+});
+
+App.IndexRoute = Ember.Route.extend({
+	model: function() {
+		return this.store.findAll('job');
+	}
 });
 
 App.JobsRoute = Ember.Route.extend({
