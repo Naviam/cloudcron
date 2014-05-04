@@ -92,6 +92,8 @@ App.Job.FIXTURES = [
   }
 ];
 
+App.Tag.FIXTURES = [];
+
 App.Task.FIXTURES = [
 	{
 		id: 1,
