@@ -5,6 +5,7 @@
   <link href='/static/bootstrap/dist/css/bootstrap.css' rel='stylesheet' />
   <link href='/css/application.css' rel='stylesheet' />
   <script src='/static/jquery/dist/jquery.js'></script>
+  <script src='/static/bootstrap/dist/js/bootstrap.js'></script>
   <script src='/static/handlebars/handlebars.js'></script>
   <script src='/static/ember/ember.js'></script>
   <script src='/static/ember-data/ember-data.js'></script>
@@ -13,7 +14,7 @@
 <body>
   <script type='text/x-handlebars' data-template-name='application'>
     <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-default" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -28,7 +29,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li>{{#link-to 'index'}}Jobs{{/link-to}}</li>
             <li>{{#link-to 'calendar'}}Calendar{{/link-to}}</li>
-            <li>{{#link-to 'jobs'}}History{{/link-to}}</li>
+            <li>{{#link-to 'jobs'}}Settings{{/link-to}}</li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -42,11 +43,22 @@
     </footer>
   </script>
   <script type='text/x-handlebars' data-template-name='index'>
-    <div class='jumbotron'>
-      <h1>Welcome to The CloudCron!</h1>
-      <p class='tagline'>
-        Everything you need to make it through the winter.
-      </p>
+    <div class='row'>
+      <div class='col-sm-2'>
+        <div class='list-group'>
+        {{#link-to 'jobs' classNames='btn btn-primary' }}New Job{{/link-to}}
+        </div>
+      </div>
+      <div class='col-sm-10'>
+        {{#each}}
+        <p>
+          <h3>{{#link-to 'job' this }}{{title}}{{/link-to}}</h3>
+          <p>{{rrule}}</p>
+          <p>{{lastRun}}</p>
+          <p>{{nextRun}}</p>
+        </p>
+        {{/each}}
+      </div>
     </div>
   </script>
   <script type='text/x-handlebars' data-template-name='calendar'>
