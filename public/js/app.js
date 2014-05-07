@@ -1,5 +1,8 @@
 var App = Ember.Application.create({ LOG_TRANSITIONS: true });
 App.ApplicationAdapter = DS.RESTAdapter.extend({ namespace: 'api/v1' });
+App.ApplicationSerializer = DS.RESTSerializer.extend({
+  primaryKey: '_id'
+});
 
 App.Router.map(function() {
   this.route('calendar', { path: '/calendar' });
