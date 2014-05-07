@@ -10,11 +10,12 @@ var taskSchema = new mongoose.Schema({
 var jobSchema = new mongoose.Schema({
 	name: String,
 	tags: [String],
-	rrule: {
-		startOn: Date,
-		stopOn: Date
-	},
+	rrule: String,
 	createdOn: { type: Date, default: Date.now },
+	lastRun: Date,
+	nextRun: Date,
+	isArchived: Boolean,
+	isActive: Boolean,
 	tasks: [taskSchema]
 });
 

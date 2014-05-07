@@ -1,14 +1,11 @@
-var App = Ember.Application.create({
-  LOG_TRANSITIONS: true
-});
-App.ApplicationAdapter = DS.FixtureAdapter.extend();
+var App = Ember.Application.create({ LOG_TRANSITIONS: true });
+App.ApplicationAdapter = DS.RESTAdapter.extend({ namespace: 'api/v1' });
 
 App.Router.map(function() {
   this.route('calendar', { path: '/calendar' });
 
   this.resource('jobs', function() {
     this.resource('job', { path: '/:job_id' });
-    this.resource('new');
   });
 });
 
@@ -18,15 +15,13 @@ App.IndexController = Ember.ArrayController.extend({
   }.property('length')
 });
 
-App.JobsNewController = Ember.ObjectController.extend({
-
-});
-
-App.JobsNewRoute = Ember.Route.extend({
-
-});
-
 App.IndexRoute = Ember.Route.extend({
+	beforeModel: function() {
+		this.transitionTo('jobs');
+	}
+});
+
+App.JobsIndexRoute = Ember.Route.extend({
 	model: function() {
 		return this.store.findAll('job');
 	}
@@ -38,7 +33,7 @@ App.JobsRoute = Ember.Route.extend({
 	}
 });
 
-App.JobRoute = Ember.Route.extend({
+App.JobsJobRoute = Ember.Route.extend({
 	model: function(params) {
 		return this.store.find('job', params.job_id);
 	}
@@ -51,23 +46,23 @@ App.Job = DS.Model.extend({
   lastRun: DS.attr('date'),
   nextRun: DS.attr('date'),
   isArchived: DS.attr('boolean'),
-  isActive: DS.attr('boolean'),
-  tags: DS.hasMany('tag', {async: true}),
-  tasks: DS.hasMany('task', {async: true})
+  isActive: DS.attr('boolean')
+  // tags: DS.hasMany('tag', {async: true}),
+  // tasks: DS.hasMany('task', {async: true})
 });
 
-App.Task = DS.Model.extend({
-	name: DS.attr('string'),
-	type: DS.attr('string'),
-	lastRun: DS.attr('date'),
-	output: DS.attr('string'),
-	job: DS.belongsTo('job')
-});
+// App.Task = DS.Model.extend({
+//  name: DS.attr('string'),
+//  type: DS.attr('string'),
+//  lastRun: DS.attr('date'),
+//  output: DS.attr('string'),
+//  job: DS.belongsTo('job')
+// });
 
-App.Tag = DS.Model.extend({
-	name: DS.attr('string'),
-	jobs: DS.hasMany('job')
-});
+// App.Tag = DS.Model.extend({
+//  name: DS.attr('string'),
+//  jobs: DS.hasMany('job')
+// });
 
 App.Job.FIXTURES = [
   {
@@ -92,21 +87,21 @@ App.Job.FIXTURES = [
   }
 ];
 
-App.Tag.FIXTURES = [];
+// App.Tag.FIXTURES = [];
 
-App.Task.FIXTURES = [
-	{
-		id: 1,
-		name: 'Execute program',
-		type: 'execute',
-		lastRun: new Date(),
-		output: 'result is ..'
-	},
-	{
-		id: 2,
-		name: 'Email results',
-		type: 'email',
-		lastRun: new Date(),
-		output: 'email has been sent'
-	}
-];
+// App.Task.FIXTURES = [
+// 	{
+// 		id: 1,
+// 		name: 'Execute program',
+// 		type: 'execute',
+// 		lastRun: new Date(),
+// 		output: 'result is ..'
+// 	},
+// 	{
+// 		id: 2,
+// 		name: 'Email results',
+// 		type: 'email',
+// 		lastRun: new Date(),
+// 		output: 'email has been sent'
+// 	}
+// ];

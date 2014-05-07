@@ -29,7 +29,7 @@
     	}
 	},
 	"mongodb": {
-		"url": "mongodb://rmuser:kXc3GX2cSvkj0@ds027519.mongolab.com:27519/naviam"
+		"url": "mongodb://dbuser:LNOTS4Zq7Lchb@ds045627.mongolab.com:45627/cloudcron"
 	},
 	"aws": {
 		"accessKeyId": "AKIAJD4SVUCUBGCL4ZZQ", 

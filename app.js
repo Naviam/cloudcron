@@ -1,13 +1,21 @@
-var express = require('express');
+var express        = require('express');
+var cookieParser   = require('cookie-parser');
+var session        = require('express-session');
+var bodyParser     = require('body-parser');
+var passport       = require('passport');
+var GoogleStrategy = require('passport-google').Strategy;
+
 var app = express();
-var routes = require('./routes')(app);
+
+app.use(cookieParser());
+app.use(session({ secret: 'keyboard cat', key: 'sid', cookie: { secure: true }}));
+app.use(bodyParser());
+app.use(require('method-override')());
 
 app.use(express.static(__dirname + '/public'));
 app.use('/static',  express.static(__dirname + '/bower_components'));
 
-var passport = require('passport')
-  , GoogleStrategy = require('passport-google').Strategy;
-
+var routes = require('./routes')(app);
 passport.use(new GoogleStrategy({
     returnURL: 'http://localhost:3000/auth/google/return',
     realm: 'http://localhost:3000/'
