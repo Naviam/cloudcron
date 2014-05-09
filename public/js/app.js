@@ -1,4 +1,11 @@
-var App = Ember.Application.create({ LOG_TRANSITIONS: true });
+var App = Ember.Application.create({
+	LOG_TRANSITIONS: true,
+	Socket: EmberSockets.extend({
+        host: 'localhost',
+        port: 3000,
+        controllers: ['jobs', 'index']
+    })
+});
 App.ApplicationAdapter = DS.RESTAdapter.extend({ namespace: 'api/v1' });
 App.ApplicationSerializer = DS.RESTSerializer.extend({
   primaryKey: '_id'
@@ -6,7 +13,6 @@ App.ApplicationSerializer = DS.RESTSerializer.extend({
 
 App.Router.map(function() {
   this.route('calendar', { path: '/calendar' });
-
   this.resource('jobs', function() {
     this.resource('job', { path: '/:job_id' });
   });
@@ -15,7 +21,54 @@ App.Router.map(function() {
 App.IndexController = Ember.ArrayController.extend({
   jobsCount: function() {
 	return this.get('length');
-  }.property('length')
+  }.property('length'),
+  actions: {
+		createJob: function(job) {
+			console.log(job);
+			this.socket.emit('newJob');
+		}
+	},
+	sockets: {
+		newJob: function(job) {
+			alert('test');
+			console.log(job);
+			this.store.load(job);
+		},
+		// When EmberSockets makes a connection to the Socket.IO server.
+        connect: function() {
+            console.log('EmberSockets has connected...');
+        },
+
+        // When EmberSockets disconnects from the Socket.IO server.
+        disconnect: function() {
+            console.log('EmberSockets has disconnected...');
+        }
+	}
+});
+
+App.JobsContoller = Ember.ArrayController.extend({
+	actions: {
+		createJob: function(job) {
+			console.log(job);
+			this.socket.emit('newJob');
+		}
+	},
+	sockets: {
+		newJob: function(job) {
+			alert('test');
+			console.log(job);
+			this.store.load(job);
+		},
+		// When EmberSockets makes a connection to the Socket.IO server.
+        connect: function() {
+            console.log('EmberSockets has connected...');
+        },
+
+        // When EmberSockets disconnects from the Socket.IO server.
+        disconnect: function() {
+            console.log('EmberSockets has disconnected...');
+        }
+	}
 });
 
 App.IndexRoute = Ember.Route.extend({
@@ -53,19 +106,6 @@ App.Job = DS.Model.extend({
   // tags: DS.hasMany('tag', {async: true}),
   // tasks: DS.hasMany('task', {async: true})
 });
-
-// App.Task = DS.Model.extend({
-//  name: DS.attr('string'),
-//  type: DS.attr('string'),
-//  lastRun: DS.attr('date'),
-//  output: DS.attr('string'),
-//  job: DS.belongsTo('job')
-// });
-
-// App.Tag = DS.Model.extend({
-//  name: DS.attr('string'),
-//  jobs: DS.hasMany('job')
-// });
 
 App.Job.FIXTURES = [
   {
