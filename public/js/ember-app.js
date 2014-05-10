@@ -21,35 +21,14 @@ App.Router.map(function() {
 App.IndexController = Ember.ArrayController.extend({
   jobsCount: function() {
 	return this.get('length');
-  }.property('length'),
-  actions: {
-		createJob: function(job) {
-			console.log(job);
-			this.socket.emit('newJob');
-		}
-	},
-	sockets: {
-		newJob: function(job) {
-			alert('test');
-			console.log(job);
-			this.store.load(job);
-		},
-		// When EmberSockets makes a connection to the Socket.IO server.
-        connect: function() {
-            console.log('EmberSockets has connected...');
-        },
-
-        // When EmberSockets disconnects from the Socket.IO server.
-        disconnect: function() {
-            console.log('EmberSockets has disconnected...');
-        }
-	}
+  }.property('length')
 });
 
 App.JobsContoller = Ember.ArrayController.extend({
 	actions: {
 		createJob: function(job) {
 			console.log(job);
+      this.store.addObject(job);
 			this.socket.emit('newJob');
 		}
 	},

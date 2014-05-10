@@ -34,8 +34,8 @@ var accountSchema = new mongoose.Schema({
 mongoose.model('Account', accountSchema);
 
 var userSchema = new mongoose.Schema({
+	_id: { type: String, lowercase: true, trim: true },
 	openId: { type: Number, index: true },
-	email: { type: String, index: true },
 	password: String,
 	createdOn: { type: Date, default: Date.now },
 	account: { type: mongoose.Schema.Types.ObjectId, ref: 'Account' }
