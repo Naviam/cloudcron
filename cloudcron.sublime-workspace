@@ -1,0 +1,1027 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"work",
+				"workorders"
+			],
+			[
+				"co",
+				"console"
+			],
+			[
+				"c",
+				"console"
+			],
+			[
+				"comm",
+				"comment"
+			],
+			[
+				"com",
+				"comments"
+			],
+			[
+				"new",
+				"newpost"
+			],
+			[
+				"pos",
+				"posts"
+			],
+			[
+				"low",
+				"lowestScore"
+			],
+			[
+				"s",
+				"score"
+			],
+			[
+				"lowes",
+				"lowestScore"
+			],
+			[
+				"score",
+				"scores"
+			],
+			[
+				"sco",
+				"scores"
+			],
+			[
+				"lo",
+				"lowestScore"
+			],
+			[
+				"re",
+				"redirect"
+			],
+			[
+				"us",
+				"user"
+			],
+			[
+				"e",
+				"else"
+			],
+			[
+				"bas",
+				"basic"
+			],
+			[
+				"ac",
+				"accessTypes"
+			],
+			[
+				"acc",
+				"accessType"
+			],
+			[
+				"source",
+				"sourceProvider"
+			],
+			[
+				"git",
+				"githubHelper"
+			],
+			[
+				"github",
+				"github"
+			],
+			[
+				"pro",
+				"protocol"
+			],
+			[
+				"pr",
+				"protocol"
+			],
+			[
+				"deb",
+				"debugger"
+			],
+			[
+				"a",
+				"authenticate"
+			],
+			[
+				"fin",
+				"findById"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"gt",
+				"github"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"sa",
+				"saveError"
+			],
+			[
+				"log",
+				"login"
+			],
+			[
+				"p",
+				"providerName"
+			],
+			[
+				"d",
+				"domain"
+			],
+			[
+				"in",
+				"info"
+			],
+			[
+				"account",
+				"account"
+			],
+			[
+				"find",
+				"findOne"
+			],
+			[
+				"ps",
+				"params"
+			],
+			[
+				"err",
+				"error"
+			],
+			[
+				"Ac",
+				"Account"
+			],
+			[
+				"acco",
+				"account"
+			],
+			[
+				"o",
+				"org"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"bt",
+				"btn-default"
+			],
+			[
+				"r",
+				"render"
+			],
+			[
+				"na",
+				"nav-stacked"
+			],
+			[
+				"nav",
+				"nav-pills"
+			],
+			[
+				"er",
+				"error"
+			],
+			[
+				"pa",
+				"password"
+			],
+			[
+				"ca",
+				"callbackURL"
+			],
+			[
+				"cli",
+				"clientSecret"
+			],
+			[
+				"ser",
+				"serializeUser"
+			],
+			[
+				"auth",
+				"authenticate"
+			],
+			[
+				"con",
+				"config"
+			],
+			[
+				"use",
+				"userSchema"
+			],
+			[
+				"githu",
+				"github"
+			],
+			[
+				"proto",
+				"protocol"
+			],
+			[
+				"mo",
+				"mongodb"
+			],
+			[
+				"confi",
+				"configuration"
+			],
+			[
+				"i",
+				"info"
+			],
+			[
+				"g",
+				"green"
+			],
+			[
+				"w",
+				"warning"
+			],
+			[
+				"de",
+				"debug"
+			],
+			[
+				"en",
+				"environmentSchema"
+			],
+			[
+				"l",
+				"length"
+			],
+			[
+				"get",
+				"getBranches"
+			],
+			[
+				"Res",
+				"result"
+			],
+			[
+				"Err",
+				"error"
+			],
+			[
+				"repo",
+				"repo"
+			],
+			[
+				"environmentS",
+				"environmentSetupSchema"
+			],
+			[
+				"input",
+				"input"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"ge",
+				"getCommits"
+			],
+			[
+				"sc",
+				"scard"
+			],
+			[
+				"rep",
+				"repo"
+			],
+			[
+				"Ser",
+				"ServiceClick"
+			],
+			[
+				"gith",
+				"github"
+			],
+			[
+				"red",
+				"redisClient"
+			],
+			[
+				"form",
+				"form"
+			],
+			[
+				"fo",
+				"form"
+			],
+			[
+				"fn",
+				"function"
+			],
+			[
+				"web",
+				"webhook"
+			],
+			[
+				"f",
+				"function"
+			],
+			[
+				"ow",
+				"owner"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"labe",
+				"label-primary"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"br",
+				"branchname"
+			],
+			[
+				"own",
+				"ownerName"
+			],
+			[
+				"u",
+				"user"
+			],
+			[
+				"lab",
+				"label-primary"
+			],
+			[
+				"obse",
+				"observableArray"
+			],
+			[
+				"for",
+				"foreach"
+			],
+			[
+				"fu",
+				"fullname"
+			],
+			[
+				"ti",
+				"title"
+			],
+			[
+				"do",
+				"domain"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"sub",
+				"sub-header"
+			],
+			[
+				"St",
+				"STAGING"
+			],
+			[
+				"Q",
+				"QA2"
+			],
+			[
+				"btn",
+				"btn-lg"
+			],
+			[
+				"input-sm",
+				"input-group-sm"
+			],
+			[
+				"t",
+				"type"
+			],
+			[
+				"commit",
+				"commitSchema"
+			],
+			[
+				"ex",
+				"express"
+			],
+			[
+				"S",
+				"String"
+			],
+			[
+				"id",
+				"githubId"
+			],
+			[
+				"fi",
+				"findOrCreate"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"tes",
+				"text-justify"
+			],
+			[
+				"bst-",
+				"bst-navbar	bst-navbar"
+			],
+			[
+				"sto",
+				"storySchema"
+			],
+			[
+				"stage",
+				"stageSchema"
+			],
+			[
+				"int",
+				"integrationSchema"
+			],
+			[
+				"mon",
+				"mongoose"
+			],
+			[
+				"aut",
+				"authenticate"
+			],
+			[
+				"po",
+				"post"
+			],
+			[
+				"b",
+				"button"
+			],
+			[
+				"inpu",
+				"input-group"
+			],
+			[
+				"clie",
+				"clientSecret"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "public/js/ember-app.js",
+			"settings":
+			{
+				"buffer_size": 2976,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 7390,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "model/schema.js",
+			"settings":
+			{
+				"buffer_size": 3258,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 207.0,
+		"selected_items":
+		[
+			[
+				"INsta",
+				"Package Control: Install Package"
+			],
+			[
+				"package con",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"REST",
+				"RESTer: HTTP Request"
+			],
+			[
+				"",
+				"RESTer: HTTP Request"
+			],
+			[
+				"Install",
+				"Package Control: Install Package"
+			],
+			[
+				"Sublimelinter",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"Sub",
+				"SublimeREPL: Node"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"INstall",
+				"Package Control: Install Package"
+			],
+			[
+				"Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package",
+				"Package Control: Install Package"
+			],
+			[
+				"RES",
+				"RESTer: HTTP Request"
+			],
+			[
+				"RE",
+				"RESTer: HTTP Request"
+			],
+			[
+				"Packa",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Enable Package"
+			],
+			[
+				"Pa",
+				"Package Control: Add Repository"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"RESTer",
+				"Set Syntax: reStructuredText"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 177.0,
+		"history":
+		[
+			"node",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"ls",
+			"2-1"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/vitalihatalski/cloudcron/public/css/application.css",
+		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/README.md",
+		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/routes/sc.js",
+		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/app.js",
+		"/Users/vitalihatalski/cloudcron/views/index.html",
+		"/Users/vitalihatalski/mongocourse/hw3-1/package.json",
+		"/Users/vitalihatalski/mongocourse/hw3-1/readme.txt",
+		"/Users/vitalihatalski/mongocourse/hw3-1/app.js",
+		"/Users/vitalihatalski/visual-feature/app.js",
+		"/Users/vitalihatalski/visual-feature/model/repo.js",
+		"/Users/vitalihatalski/visual-feature/testlink.js",
+		"/Users/vitalihatalski/visual-feature/testredis.js",
+		"/Users/vitalihatalski/visual-feature/node_modules/github/index.js",
+		"/Users/vitalihatalski/visual-feature/lib/githubHelper.js",
+		"/Users/vitalihatalski/visual-feature/model/schema.js",
+		"/Users/vitalihatalski/visual-feature/controllers/index.js",
+		"/Users/vitalihatalski/visual-feature/lib/passportHelper.js",
+		"/Users/vitalihatalski/visual-feature/node_modules/github/test/oauth_server.js",
+		"/Users/vitalihatalski/visual-feature/model/schema-test.js",
+		"/Users/vitalihatalski/visual-feature/a2.js",
+		"/Users/vitalihatalski/visual-feature/a.js",
+		"/Users/vitalihatalski/visual-feature/config/app.json",
+		"/Users/vitalihatalski/visual-feature/node_modules/github/README.md",
+		"/Users/vitalihatalski/visual-feature/lib/config.js",
+		"/Users/vitalihatalski/visual-feature/package.json",
+		"/Users/vitalihatalski/visual-feature/node_modules/passport-oauth/README.md",
+		"/Users/vitalihatalski/Downloads/week_1_introduction/asynchronous_vs_synchronous/async_vs_sync/app.js",
+		"/Users/vitalihatalski/visual-feature/views/createaccount.jade",
+		"/Users/vitalihatalski/visual-feature/docs/github-orgs-object.json",
+		"/Users/vitalihatalski/visual-feature/public/js/models/AppViewModel.js",
+		"/Users/vitalihatalski/visual-feature/public/js/models/AccountViewModel.js",
+		"/Users/vitalihatalski/visual-feature/views/dashboard.jade",
+		"/Users/vitalihatalski/visual-feature/views/index.jade",
+		"/Users/vitalihatalski/visual-feature/public/css/login.css",
+		"/Users/vitalihatalski/visual-feature/views/login.jade",
+		"/Users/vitalihatalski/visual-feature/public/css/jumbotron-narrow.css",
+		"/Users/vitalihatalski/visual-feature/views/layout.jade",
+		"/Users/vitalihatalski/visual-feature/docs/github-profile.json",
+		"/Users/vitalihatalski/visual-feature/lib/github.js",
+		"/Users/vitalihatalski/visual-feature/controllers/login.js",
+		"/Users/vitalihatalski/visual-feature/routes/accounts.js",
+		"/Users/vitalihatalski/visual-feature/model/account.js",
+		"/Users/vitalihatalski/visual-feature/routes/views.js",
+		"/Users/vitalihatalski/visual-feature/router.js",
+		"/Users/vitalihatalski/visual-feature/routes/routes.js",
+		"/Users/vitalihatalski/visual-feature/routes/index.js",
+		"/Users/vitalihatalski/visual-feature/routes/sns.js",
+		"/Users/vitalihatalski/visual-feature/routes/auth.js",
+		"/Users/vitalihatalski/visual-feature/controllers/home.js",
+		"/Users/vitalihatalski/visual-feature/lib/utils.js",
+		"/Users/vitalihatalski/visual-feature/routes/project.js",
+		"/Users/vitalihatalski/visual-feature/test/test.js",
+		"/Users/vitalihatalski/visual-feature/test/model.js",
+		"/Users/vitalihatalski/visual-feature/test/home.js",
+		"/Users/vitalihatalski/visual-feature/test/controllers/home.js",
+		"/Users/vitalihatalski/visual-feature/lib/mongodb.js",
+		"/Users/vitalihatalski/visual-feature/lib/redis.js",
+		"/Users/vitalihatalski/visual-feature/model/redis.js",
+		"/Users/vitalihatalski/visual-feature/lib/logger.js",
+		"/Users/vitalihatalski/visual-feature/.router.swp",
+		"/Users/vitalihatalski/visual-feature/model/mongodb.js",
+		"/Users/vitalihatalski/visual-feature/utils/logger.js",
+		"/Users/vitalihatalski/visual-feature/utils/sources.js",
+		"/Users/vitalihatalski/visual-feature/appinit.js",
+		"/Users/vitalihatalski/visual-feature/node_modules/node-logentries/lib/logentries.js",
+		"/Users/vitalihatalski/visual-feature/app_old.js",
+		"/Users/vitalihatalski/visual-feature/views/dashboard_new.jade",
+		"/Users/vitalihatalski/visual-feature/redis.js",
+		"/Users/vitalihatalski/visual-feature/views/createproject.jade",
+		"/Users/vitalihatalski/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/vitalihatalski/visual-feature/node_modules/github/api/v3.0.0/repos.js",
+		"/Users/vitalihatalski/visual-feature/node_modules/redis/examples/simple.js",
+		"/Users/vitalihatalski/visual-feature/model/usersRepository.js",
+		"/Users/vitalihatalski/visual-feature/public/css/site.css",
+		"/Users/vitalihatalski/visual-feature/node_modules/github/api/v3.0.0/pullRequests.js",
+		"/Users/vitalihatalski/visual-feature/public/css/dashboard.css",
+		"/Users/vitalihatalski/visual-feature/node_modules/github/error.js",
+		"/Users/vitalihatalski/visual-feature/views/marketing_layout.jade",
+		"/Users/vitalihatalski/visual-feature/model/db.js",
+		"/Users/vitalihatalski/visual-feature/README.md",
+		"/Users/vitalihatalski/visual-feature/docs/json-objects.json",
+		"/Users/vitalihatalski/visual-feature/node_modules/github/api/v3.0.0/user.js",
+		"/Users/vitalihatalski/visual-feature/node_modules/github/api/v3.0.0/userTest.js",
+		"/Users/vitalihatalski/visual-feature/node_modules/zombie/node_modules/request/node_modules/hawk/node_modules/sntp/test/index.js",
+		"/Users/vitalihatalski/visual-feature/node_modules/github/api/v3.0.0/routes.json",
+		"/Users/vitalihatalski/visual-feature/docs/github-auth-object.json",
+		"/Users/vitalihatalski/visual-feature/docs/request-object.txt",
+		"/Users/vitalihatalski/visual-feature/docs/github_objects.txt",
+		"/Users/vitalihatalski/visual-feature/docs/REST-client.txt",
+		"/Users/vitalihatalski/visual-feature/routes/user.js",
+		"/Users/vitalihatalski/visual-feature/routes/github.js",
+		"/Users/vitalihatalski/Library/Application Support/Sublime Text 3/Packages/RESTer HTTP Client/RESTer.sublime-settings",
+		"/Users/vitalihatalski/Library/Application Support/Sublime Text 3/Packages/User/RESTer.sublime-settings",
+		"/Users/vitalihatalski/Library/Application Support/Sublime Text 3/Packages/Nodejs/Nodejs.sublime-settings",
+		"/Users/vitalihatalski/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/Users/vitalihatalski/Library/Application Support/Sublime Text 3/Packages/MacTerminal/Default.sublime-keymap",
+		"/Users/vitalihatalski/visual-feature/model/project.js",
+		"/Users/vitalihatalski/visual-feature/model/user.js",
+		"/Users/vitalihatalski/Downloads/299.5a90a49d9d3fc4844a4fb93791854e5917b7948e.sql",
+		"/Users/vitalihatalski/visual-feature/github_objects.txt",
+		"/Users/vitalihatalski/visual-feature/signin.js",
+		"/Users/vitalihatalski/visual-feature/model/users.js",
+		"/Users/vitalihatalski/visual-feature/repositories/usersRepository.js",
+		"/Users/vitalihatalski/visual-feature/node_modules/redis/README.md",
+		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/package.json",
+		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/node_modules/mongodb/package.json",
+		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/node_modules/mongodb/Readme.md",
+		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/views/index.jade",
+		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/maker.js",
+		"/Users/vitalihatalski/staging_logs.txt",
+		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/views/sc.jade",
+		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/views/layout.jade",
+		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/routes/user.js",
+		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/views/profile.jade",
+		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/creds/amazon-credentials.json",
+		"/Users/vitalihatalski/ServiceClick/ServiceChannel.Consumer.SQS/App.Deploy-Sandbox1.config",
+		"/Users/vitalihatalski/ServiceClick/ServiceChannel.Services.WebApi/Web.Deploy-Staging.config",
+		"/Users/vitalihatalski/visual-feature/LICENSE",
+		"/Users/vitalihatalski/visual-feature/routes/evnironments.js",
+		"/Users/vitalihatalski/xml integration procedure.sql"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/vitalihatalski/visual-feature/routes",
+			"/Users/vitalihatalski/visual-feature,-node_modules,-public",
+			"/Users/vitalihatalski/visual-feature,-node_modules/,-public/",
+			"/Users/vitalihatalski/visual-feature,-node_modules/",
+			"/Users/vitalihatalski/visual-feature,-/node_modules/",
+			"/Users/vitalihatalski/visual-feature,-/node_modules",
+			"/Users/vitalihatalski/visual-feature",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"getQueryAndUrl",
+			"pathPrefix",
+			"util",
+			"User",
+			"githubAuthenticate",
+			";\n",
+			"callback",
+			"userId",
+			"console",
+			"();\n",
+			"authenticate",
+			"utils",
+			"meta",
+			"console",
+			"client.quit(function (err, res) {\n//     console.log(\"Exiting from quit command.\");\n// });",
+			"httpClient",
+			"getPage",
+			"0px",
+			"SSL routines",
+			"db",
+			"getaddrinfo",
+			"getaddrinfo ENOTFOUND",
+			"Visual Feature",
+			"'"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"lib",
+			"\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "public/js/ember-app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2976,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7390,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								959,
+								959
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "model/schema.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3258,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								320,
+								320
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.CSS Extended Completions":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "cloudcron.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/ServiceChannel.OAuth.Client/sc-oauth-client.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 174.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
