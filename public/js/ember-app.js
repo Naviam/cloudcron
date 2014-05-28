@@ -25,13 +25,6 @@ App.IndexController = Ember.ArrayController.extend({
 });
 
 App.JobsContoller = Ember.ArrayController.extend({
-	actions: {
-		createJob: function(job) {
-			console.log(job);
-      this.store.addObject(job);
-			this.socket.emit('newJob');
-		}
-	},
 	sockets: {
 		newJob: function(job) {
 			alert('test');
@@ -48,6 +41,16 @@ App.JobsContoller = Ember.ArrayController.extend({
             console.log('EmberSockets has disconnected...');
         }
 	}
+});
+
+App.JobController = Ember.ObjectController.extend({
+  actions: {
+    createJob: function() {
+      console.log('createjob');
+      //this.store.addObject(job);
+      //this.socket.emit('newJob');
+    }
+  }
 });
 
 App.IndexRoute = Ember.Route.extend({
