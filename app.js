@@ -11,7 +11,6 @@ var server = app.listen(3000, function() {
 });
 var io = require('socket.io').listen(server);
 
-
 app.use(cookieParser());
 app.use(session({ secret: 'keyboard cat', key: 'sid', cookie: { secure: true }}));
 app.use(bodyParser());
@@ -20,6 +19,12 @@ app.use(require('method-override')());
 app.use(express.static(__dirname + '/public'));
 app.use('/bower',  express.static(__dirname + '/bower_components'));
 app.use('/npm',  express.static(__dirname + '/node_modules'));
+
+app.use(function(req, res, next) {
+  // expose session object to the views
+  res.locals.session = req.session;
+  next();
+});
 
 var routes = require('./routes')(app);
 passport.use(new GoogleStrategy({
@@ -44,7 +49,8 @@ app.get('/auth/google/return',
                                     failureRedirect: '/login' }));
 
 app.get('/', function (req, res) {
-  res.sendfile(__dirname + '/index.html');
+  //res.render('index');
+  res.sendfile(__dirname + '/views/index.html');
 });
 
 io.sockets.on('connection', function (socket) {

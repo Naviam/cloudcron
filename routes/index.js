@@ -31,11 +31,13 @@ module.exports = function (app) {
 	});
 
 	app.post('/api/v1/jobs', function(req, res) {
-		Job.insert(req.body, function(error, result) {
+		console.log('received create job request');
+		Job.create(req.body, function(error, result) {
 			if (error) {
 				console.log(error);
 			} else {
 				console.dir(result);
+				res.json(result);
 			}
 		});
 	});

@@ -1,3 +1,12 @@
+Ember.Application.initializer({
+    name: 'userapp',
+    initialize: function(container, application) {
+        Ember.UserApp.setup(application, {
+          appId: '53895b38c03b4',
+          usernameIsEmail: true
+        });
+    }
+});
 var App = Ember.Application.create({
 	LOG_TRANSITIONS: true,
 	Socket: EmberSockets.extend({
@@ -12,22 +21,22 @@ App.ApplicationSerializer = DS.RESTSerializer.extend({
 });
 
 App.Router.map(function() {
+  this.route('login');
+  this.route('signup');
   this.route('calendar', { path: '/calendar' });
   this.resource('jobs', function() {
     this.resource('job', { path: '/:job_id' });
   });
 });
 
-App.IndexController = Ember.ArrayController.extend({
-  jobsCount: function() {
-	return this.get('length');
-  }.property('length'),
-  actions: {
-		createJob: function(job) {
-			console.log(job);
-			this.socket.emit('newJob');
-		}
-	},
+App.ApplicationRoute = Ember.Route.extend(Ember.UserApp.ApplicationRouteMixin);
+App.SignupController = Ember.Controller.extend(Ember.UserApp.FormControllerMixin);
+App.LoginController = Ember.Controller.extend(Ember.UserApp.FormControllerMixin);
+App.IndexRoute = Ember.Route.extend(Ember.UserApp.ProtectedRouteMixin);
+
+App.IndexController = Ember.ArrayController.extend({});
+
+App.JobsContoller = Ember.ArrayController.extend({
 	sockets: {
 		newJob: function(job) {
 			alert('test');
@@ -46,29 +55,14 @@ App.IndexController = Ember.ArrayController.extend({
 	}
 });
 
-App.JobsContoller = Ember.ArrayController.extend({
-	actions: {
-		createJob: function(job) {
-			console.log(job);
-			this.socket.emit('newJob');
-		}
-	},
-	sockets: {
-		newJob: function(job) {
-			alert('test');
-			console.log(job);
-			this.store.load(job);
-		},
-		// When EmberSockets makes a connection to the Socket.IO server.
-        connect: function() {
-            console.log('EmberSockets has connected...');
-        },
-
-        // When EmberSockets disconnects from the Socket.IO server.
-        disconnect: function() {
-            console.log('EmberSockets has disconnected...');
-        }
-	}
+App.JobController = Ember.ObjectController.extend({
+  actions: {
+    createJob: function() {
+      console.log('createjob');
+      //this.store.addObject(job);
+      //this.socket.emit('newJob');
+    }
+  }
 });
 
 App.IndexRoute = Ember.Route.extend({
@@ -129,22 +123,3 @@ App.Job.FIXTURES = [
     isActive: true
   }
 ];
-
-// App.Tag.FIXTURES = [];
-
-// App.Task.FIXTURES = [
-// 	{
-// 		id: 1,
-// 		name: 'Execute program',
-// 		type: 'execute',
-// 		lastRun: new Date(),
-// 		output: 'result is ..'
-// 	},
-// 	{
-// 		id: 2,
-// 		name: 'Email results',
-// 		type: 'email',
-// 		lastRun: new Date(),
-// 		output: 'email has been sent'
-// 	}
-// ];
