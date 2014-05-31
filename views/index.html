@@ -11,6 +11,8 @@
   <script src='/bower/handlebars/handlebars.js'></script>
   <script src='/bower/ember/ember.js'></script>
   <script src='/bower/ember-data/ember-data.js'></script>
+  <script src='/bower/userapp/userapp.client.js'></script>
+  <script src='/bower/userapp-ember/ember-userapp.js'></script>
   <script src='/bower/socket.io-client/dist/socket.io.js'></script>
   <script src='/npm/ember-sockets/dist/ember-sockets.min.js'></script>
   <script src='/js/ember-app.js'></script>
@@ -37,10 +39,15 @@
           <span>Menu</span>
         </button>
         {{#link-to 'index' class='navbar-brand'}}CloudCron{{/link-to}}
-        <div class="navbar-collapse collapse">
+        <div class="navbar-collapse collapse pull-right">
           <ul class="nav navbar-nav">
             <li>{{#link-to 'index'}}Jobs{{/link-to}}</li>
             <li>{{#link-to 'calendar'}}Calendar{{/link-to}}</li>
+            <li>
+              {{#if user.authenticated}}
+                  <a href="#" {{ action 'logout' }}>Log out</a>
+              {{/if}}
+            </li>
           </ul>
         </div>
       </div>
@@ -52,6 +59,39 @@
       <hr />
       <p class='pull-left'>&copy; 2014 CloudCron, Inc.</p>
     </footer>
+  </script>
+  <script type="text/x-handlebars" data-template-name="login">
+    <form {{action login on='submit'}}>
+        <label for="username">Username</label>
+        {{input id='username' placeholder='Enter Username' class='form-control' value=username}}
+        <label for="password">Password</label>
+        {{input id='password' placeholder='Enter Password' class='form-control' type='password' value=password}}
+        <button type="submit" class="btn btn-default">
+          {{#if loading}}
+              <img src="https://app.userapp.io/img/ajax-loader-transparent.gif">
+          {{else}}
+              Log In
+          {{/if}}
+        </button>
+    </form>
+    <a href="#" {{ action 'oauth' 'google' }}>Log in with Google</a>
+    {{#if error}}
+        <div class="alert alert-error">{{error.message}}</div>
+    {{/if}}
+  </script>
+  <script type="text/x-handlebars" data-template-name="signup">
+    <form {{action signup on='submit'}}>
+        <label for="username">Username</label>
+        {{input id='username' placeholder='Enter a Username' class='form-control' value=username}}
+        <label for="email">Email</label>
+        {{input id='email' placeholder='Enter your Email' class='form-control' value=email}}
+        <label for="password">Password</label>
+        {{input id='password' placeholder='Enter a Password' class='form-control' type='password' value=password}}
+        <button type="submit" class="btn btn-default">Sign up</button>
+    </form>
+    {{#if error}}
+        <div class="alert alert-error">{{error.message}}</div>
+    {{/if}}
   </script>
   <script type='text/x-handlebars' data-template-name='calendar'>
     <h1>Calendar!</h1>
@@ -72,7 +112,7 @@
                       </div>
                     </div>
                     <div class="col-xs-3">
-                      <button {{action 'createJob'}} class='btn btn-primary btn-block'>New Job</button>
+                      <button {{action 'createJob'}} class='btn btn-success btn-block'><i class="fa fa-plus"></i> Job</button>
                     </div>
                   </div>
                 </form>
@@ -80,7 +120,6 @@
               <div class="list-group">
                 {{#each}}
                   {{#link-to 'job' this class="list-group-item"}}
-                    <img src="/images/Sofia Acey.jpg" class="img-rounded pull-left"/>
                     <h4 class="list-group-item-heading">{{title}}</h4>
                     <p class="list-group-item-text">{{rrule}}</p>
                   {{/link-to}}
@@ -97,7 +136,7 @@
       </div>
   </script>
   <script type='text/x-handlebars' data-template-name='jobs/index'>
-
+        <h1>Welcome {{user.current.first_name}}!</h1>
         <div class="panel panel-default bootcards-summary">
           <div class="panel-heading">
             <h3 class="panel-title">Jobs Summary (Today)</h3>
