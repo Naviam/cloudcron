@@ -32,7 +32,6 @@ App.Router.map(function() {
 App.ApplicationRoute = Ember.Route.extend(Ember.UserApp.ApplicationRouteMixin);
 App.SignupController = Ember.Controller.extend(Ember.UserApp.FormControllerMixin);
 App.LoginController = Ember.Controller.extend(Ember.UserApp.FormControllerMixin);
-App.IndexRoute = Ember.Route.extend(Ember.UserApp.ProtectedRouteMixin);
 
 App.IndexController = Ember.ArrayController.extend({});
 
@@ -65,25 +64,25 @@ App.JobController = Ember.ObjectController.extend({
   }
 });
 
-App.IndexRoute = Ember.Route.extend({
+App.IndexRoute = Ember.Route.extend(Ember.UserApp.ProtectedRouteMixin, {
 	beforeModel: function() {
 		this.transitionTo('jobs');
 	}
 });
 
-App.JobsIndexRoute = Ember.Route.extend({
+App.JobsIndexRoute = Ember.Route.extend(Ember.UserApp.ProtectedRouteMixin, {
 	model: function() {
 		return this.store.findAll('job');
 	}
 });
 
-App.JobsRoute = Ember.Route.extend({
+App.JobsRoute = Ember.Route.extend(Ember.UserApp.ProtectedRouteMixin, {
 	model: function() {
 		return this.store.findAll('job');
 	}
 });
 
-App.JobsJobRoute = Ember.Route.extend({
+App.JobsJobRoute = Ember.Route.extend(Ember.UserApp.ProtectedRouteMixin, {
 	model: function(params) {
 		return this.store.find('job', params.job_id);
 	}
