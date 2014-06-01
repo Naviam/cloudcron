@@ -19,11 +19,15 @@ App.ApplicationAdapter = DS.RESTAdapter.extend({ namespace: 'api/v1' });
 App.ApplicationSerializer = DS.RESTSerializer.extend({
   primaryKey: '_id'
 });
+App.TextField = Ember.TextField.extend({
+    attributeBindings: ['accept', 'autocomplete', 'autofocus', 'name', 'required']
+});
 
 App.Router.map(function() {
   this.route('login');
   this.route('signup');
-  this.route('calendar', { path: '/calendar' });
+  this.route('upgrade', { path: '/upgrade' });
+  this.route('settings', { path: '/settings' });
   this.resource('jobs', function() {
     this.resource('job', { path: '/:job_id' });
   });
