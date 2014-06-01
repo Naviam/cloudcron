@@ -3,6 +3,7 @@
 <head>
   <base href='http://localhost:3000/' />
   <link href='/bower/bootstrap/dist/css/bootstrap.css' rel='stylesheet' />
+  <link href='/bower/bootstrap-social/bootstrap-social.css' rel='stylesheet' />
   <link href='/bower/bootcards/dist/css/bootcards-desktop.min.css' rel='stylesheet'>
   <link href='/css/application.css' rel='stylesheet' />
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
@@ -41,11 +42,14 @@
         {{#link-to 'index' class='navbar-brand'}}CloudCron{{/link-to}}
         <div class="navbar-collapse collapse pull-right">
           <ul class="nav navbar-nav">
-            <li>{{#link-to 'index'}}Jobs{{/link-to}}</li>
-            <li>{{#link-to 'calendar'}}Calendar{{/link-to}}</li>
+            <li>{{#link-to 'jobs'}}Jobs{{/link-to}}</li>
+            <li>{{#link-to 'upgrade'}}Upgrade Plan{{/link-to}}</li>
+            <li>{{#link-to 'settings'}}Settings{{/link-to}}</li>
             <li>
               {{#if user.authenticated}}
                   <a href="#" {{ action 'logout' }}>Log out</a>
+              {{else}}
+                  {{#link-to 'login' }}Log in{{/link-to}}
               {{/if}}
             </li>
           </ul>
@@ -61,40 +65,45 @@
     </footer>
   </script>
   <script type="text/x-handlebars" data-template-name="login">
-    <form {{action login on='submit'}}>
-        <label for="username">Username</label>
-        {{input id='username' placeholder='Enter Username' class='form-control' value=username}}
-        <label for="password">Password</label>
-        {{input id='password' placeholder='Enter Password' class='form-control' type='password' value=password}}
-        <button type="submit" class="btn btn-default">
-          {{#if loading}}
-              <img src="https://app.userapp.io/img/ajax-loader-transparent.gif">
-          {{else}}
-              Log In
-          {{/if}}
-        </button>
+    <form class="form" {{action login on='submit'}}>
+      <h2 class="form-heading">Sign In | {{#link-to 'signup' }}Sign Up{{/link-to}}</h2>
+      <div class="form-fields">
+        {{input id='username' placeholder='Enter your Email' class='form-control' value=username required="on" autofocus="on"}}
+        {{input id='password' placeholder='Enter a Password' class='form-control' type='password' value=password required="on"}}
+      </div>
+      {{#if error}}
+          <div class="alert alert-error">{{error.message}}</div>
+      {{/if}}
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+      <hr/>
+      <button {{ action 'oauth' 'google' }} class="btn btn-social btn-google-plus btn-block">
+        <i class="fa fa-google-plus fa-lg"></i>
+        Sign in with Google
+      </button>
     </form>
-    <a href="#" {{ action 'oauth' 'google' }}>Log in with Google</a>
-    {{#if error}}
-        <div class="alert alert-error">{{error.message}}</div>
-    {{/if}}
   </script>
   <script type="text/x-handlebars" data-template-name="signup">
-    <form {{action signup on='submit'}}>
-        <label for="username">Username</label>
-        {{input id='username' placeholder='Enter a Username' class='form-control' value=username}}
-        <label for="email">Email</label>
-        {{input id='email' placeholder='Enter your Email' class='form-control' value=email}}
-        <label for="password">Password</label>
-        {{input id='password' placeholder='Enter a Password' class='form-control' type='password' value=password}}
-        <button type="submit" class="btn btn-default">Sign up</button>
+    <form class="form" {{action signup on='submit'}}>
+        <h2 class="form-heading">{{#link-to 'login' }}Sign In{{/link-to}} | Sign Up</h2>
+        {{input id='email' placeholder='Enter your Email' class='form-control' value=email required="on" autofocus="on"}}
+        {{input id='password' placeholder='Enter a Password' class='form-control' type='password' value=password required="on"}}
+        {{#if error}}
+            <div class="alert alert-error">{{error.message}}</div>
+        {{/if}}
+        <button type="submit" class="btn btn-lg btn-primary btn-block">Sign up</button>
+        <hr/>
+        <button {{ action 'oauth' 'google' }} class="btn btn-social btn-google-plus btn-block">
+          <i class="fa fa-google-plus fa-lg"></i>
+          Sign in with Google
+        </button>
     </form>
-    {{#if error}}
-        <div class="alert alert-error">{{error.message}}</div>
-    {{/if}}
   </script>
-  <script type='text/x-handlebars' data-template-name='calendar'>
-    <h1>Calendar!</h1>
+  <script type='text/x-handlebars' data-template-name='upgrade'>
+    <h1>Upgrade plan!</h1>
+    <p>This site would not be possible without the hardworking Ember Core Team!</p>
+  </script>
+  <script type='text/x-handlebars' data-template-name='settings'>
+    <h1>Settings!</h1>
     <p>This site would not be possible without the hardworking Ember Core Team!</p>
   </script>
   <script type='text/x-handlebars' data-template-name='jobs'>
