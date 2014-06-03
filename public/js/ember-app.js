@@ -19,6 +19,7 @@ App.ApplicationAdapter = DS.RESTAdapter.extend({ namespace: 'api/v1' });
 App.ApplicationSerializer = DS.RESTSerializer.extend({
   primaryKey: '_id'
 });
+// description: http://blackbe.lt/adding-custom-attributes-emberjs-form-input-elements/
 App.TextField = Ember.TextField.extend({
     attributeBindings: ['accept', 'autocomplete', 'autofocus', 'name', 'required']
 });
