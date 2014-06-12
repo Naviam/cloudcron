@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/Naviam/cloudcron",
   "dependencies": {
+    "aws-sdk": "^2.0.0-rc.19",
     "body-parser": "^1.0.2",
     "cookie-parser": "^1.0.1",
     "express": "~4.1.0",
