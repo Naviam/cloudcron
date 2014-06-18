@@ -3,6 +3,10 @@ cloudcron
 
 [![Build Status](https://magnum.travis-ci.com/Naviam/cloudcron.svg?token=4rGmbsqofyYvrbteixY9&branch=master)](https://magnum.travis-ci.com/Naviam/cloudcron)
 
+- Docker image
+
+install docker on macos: https://github.com/boot2docker/osx-installer/releases
+
 - To run application please do the following:
 * install nodejs and npm
 * install bower
