@@ -1,0 +1,16 @@
+{
+  "name": "userapp",
+  "version": "1.2.3",
+  "main": "./userapp.client.js",
+  "homepage": "https://github.com/userapp-io/userapp-javascript",
+  "_release": "1.2.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.2.3",
+    "commit": "eb2114c77291bec751536b236847c08d59bb26c3"
+  },
+  "_source": "git://github.com/userapp-io/userapp-javascript.git",
+  "_target": "~1.2.3",
+  "_originalSource": "userapp",
+  "_direct": true
+}
