@@ -6,7 +6,7 @@ var passport       = require('passport');
 var GoogleStrategy = require('passport-google').Strategy;
 
 var app = express();
-var server = app.listen(3000, function() {
+var server = app.listen(process.env.PORT || 3000, function() {
     console.log('Listening on port %d', server.address().port);
 });
 var io = require('socket.io').listen(server);
