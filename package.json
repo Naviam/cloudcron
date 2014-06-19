@@ -1,6 +1,6 @@
 {
   "name": "CloudCron",
-  "version": "0.0.0",
+  "version": "0.0.0-1",
   "description": "Scalable Task Automation and Scheduling",
   "main": "app.js",
   "scripts": {
