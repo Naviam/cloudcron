@@ -4,6 +4,70 @@
 		"selected_items":
 		[
 			[
+				"res",
+				"res"
+			],
+			[
+				"acc",
+				"accountSchema"
+			],
+			[
+				"pro",
+				"provider"
+			],
+			[
+				"v",
+				"versionControl"
+			],
+			[
+				"req",
+				"required"
+			],
+			[
+				"tr",
+				"true"
+			],
+			[
+				"require",
+				"required"
+			],
+			[
+				"e",
+				"email"
+			],
+			[
+				"E",
+				"Email"
+			],
+			[
+				"is",
+				"isArchived"
+			],
+			[
+				"at",
+				"attr"
+			],
+			[
+				"ac",
+				"account"
+			],
+			[
+				"pa",
+				"parser"
+			],
+			[
+				"btn",
+				"btn-block"
+			],
+			[
+				"link",
+				"link-to"
+			],
+			[
+				"sig",
+				"signup"
+			],
+			[
 				"work",
 				"workorders"
 			],
@@ -64,20 +128,8 @@
 				"user"
 			],
 			[
-				"e",
-				"else"
-			],
-			[
 				"bas",
 				"basic"
-			],
-			[
-				"ac",
-				"accessTypes"
-			],
-			[
-				"acc",
-				"accessType"
 			],
 			[
 				"source",
@@ -90,10 +142,6 @@
 			[
 				"github",
 				"github"
-			],
-			[
-				"pro",
-				"protocol"
 			],
 			[
 				"pr",
@@ -194,10 +242,6 @@
 			[
 				"er",
 				"error"
-			],
-			[
-				"pa",
-				"password"
 			],
 			[
 				"ca",
@@ -348,10 +392,6 @@
 				"label-primary"
 			],
 			[
-				"res",
-				"result"
-			],
-			[
 				"br",
 				"branchname"
 			],
@@ -404,10 +444,6 @@
 				"QA2"
 			],
 			[
-				"btn",
-				"btn-lg"
-			],
-			[
 				"input-sm",
 				"input-group-sm"
 			],
@@ -434,10 +470,6 @@
 			[
 				"fi",
 				"findOrCreate"
-			],
-			[
-				"req",
-				"require"
 			],
 			[
 				"tes",
@@ -488,26 +520,66 @@
 	"buffers":
 	[
 		{
+			"file": "views/index.html",
+			"settings":
+			{
+				"buffer_size": 13039,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app.js",
+			"settings":
+			{
+				"buffer_size": 2263,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/index.js",
+			"settings":
+			{
+				"buffer_size": 3872,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/config.js",
+			"settings":
+			{
+				"buffer_size": 570,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/development.json",
+			"settings":
+			{
+				"buffer_size": 987,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/app.json",
+			"settings":
+			{
+				"buffer_size": 1069,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "if (user) {\n					if (user.accounts === undefined) {\n						Account.create({ 'name': 'Personal', createdBy: user._id }, function(accountError, account) {\n							debugger;\n\n							if (accountError) {\n								console.log(accountError);\n								res.json(500, { error: accountError });\n							} else {\n								console.dir(account);\n								user.accounts.account = account;\n								user.save(function(updatedAccountError, updatedAccount) {\n									if (updatedAccountError) {\n										console.log(updatedAccountError);\n										res.json(500, { error: updatedAccountError });\n									} else {\n										res.json(updatedAccount);\n									}\n								});\n							}\n						});\n					}\n				}\n				else {\n					User.create(req.body, function(newuserError, newuser) {\n						if (newuserError) {\n							console.log(newuserError);\n							res.json(500, { error: newuserError });\n						} else {\n							res.json(newuser);\n						}\n					});\n				}",
+			"settings":
+			{
+				"buffer_size": 921,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "public/js/ember-app.js",
 			"settings":
 			{
-				"buffer_size": 2976,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 7390,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "model/schema.js",
-			"settings":
-			{
-				"buffer_size": 3258,
+				"buffer_size": 4546,
 				"line_ending": "Unix"
 			}
 		}
@@ -515,9 +587,17 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 207.0,
+		"height": 287.0,
 		"selected_items":
 		[
+			[
+				"preview",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
 			[
 				"INsta",
 				"Package Control: Install Package"
@@ -525,10 +605,6 @@
 			[
 				"package con",
 				"Package Control: Remove Package"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
 			],
 			[
 				"REST",
@@ -595,7 +671,7 @@
 				"Set Syntax: reStructuredText"
 			]
 		],
-		"width": 467.0
+		"width": 647.0
 	},
 	"console":
 	{
@@ -619,126 +695,134 @@
 	},
 	"file_history":
 	[
-		"/Users/vitalihatalski/cloudcron/public/css/application.css",
-		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/README.md",
-		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/routes/sc.js",
-		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/app.js",
-		"/Users/vitalihatalski/cloudcron/views/index.html",
-		"/Users/vitalihatalski/mongocourse/hw3-1/package.json",
-		"/Users/vitalihatalski/mongocourse/hw3-1/readme.txt",
-		"/Users/vitalihatalski/mongocourse/hw3-1/app.js",
-		"/Users/vitalihatalski/visual-feature/app.js",
-		"/Users/vitalihatalski/visual-feature/model/repo.js",
-		"/Users/vitalihatalski/visual-feature/testlink.js",
-		"/Users/vitalihatalski/visual-feature/testredis.js",
-		"/Users/vitalihatalski/visual-feature/node_modules/github/index.js",
-		"/Users/vitalihatalski/visual-feature/lib/githubHelper.js",
-		"/Users/vitalihatalski/visual-feature/model/schema.js",
-		"/Users/vitalihatalski/visual-feature/controllers/index.js",
-		"/Users/vitalihatalski/visual-feature/lib/passportHelper.js",
-		"/Users/vitalihatalski/visual-feature/node_modules/github/test/oauth_server.js",
-		"/Users/vitalihatalski/visual-feature/model/schema-test.js",
-		"/Users/vitalihatalski/visual-feature/a2.js",
-		"/Users/vitalihatalski/visual-feature/a.js",
-		"/Users/vitalihatalski/visual-feature/config/app.json",
-		"/Users/vitalihatalski/visual-feature/node_modules/github/README.md",
-		"/Users/vitalihatalski/visual-feature/lib/config.js",
-		"/Users/vitalihatalski/visual-feature/package.json",
-		"/Users/vitalihatalski/visual-feature/node_modules/passport-oauth/README.md",
-		"/Users/vitalihatalski/Downloads/week_1_introduction/asynchronous_vs_synchronous/async_vs_sync/app.js",
-		"/Users/vitalihatalski/visual-feature/views/createaccount.jade",
-		"/Users/vitalihatalski/visual-feature/docs/github-orgs-object.json",
-		"/Users/vitalihatalski/visual-feature/public/js/models/AppViewModel.js",
-		"/Users/vitalihatalski/visual-feature/public/js/models/AccountViewModel.js",
-		"/Users/vitalihatalski/visual-feature/views/dashboard.jade",
-		"/Users/vitalihatalski/visual-feature/views/index.jade",
-		"/Users/vitalihatalski/visual-feature/public/css/login.css",
-		"/Users/vitalihatalski/visual-feature/views/login.jade",
-		"/Users/vitalihatalski/visual-feature/public/css/jumbotron-narrow.css",
-		"/Users/vitalihatalski/visual-feature/views/layout.jade",
-		"/Users/vitalihatalski/visual-feature/docs/github-profile.json",
-		"/Users/vitalihatalski/visual-feature/lib/github.js",
-		"/Users/vitalihatalski/visual-feature/controllers/login.js",
-		"/Users/vitalihatalski/visual-feature/routes/accounts.js",
-		"/Users/vitalihatalski/visual-feature/model/account.js",
-		"/Users/vitalihatalski/visual-feature/routes/views.js",
-		"/Users/vitalihatalski/visual-feature/router.js",
-		"/Users/vitalihatalski/visual-feature/routes/routes.js",
-		"/Users/vitalihatalski/visual-feature/routes/index.js",
-		"/Users/vitalihatalski/visual-feature/routes/sns.js",
-		"/Users/vitalihatalski/visual-feature/routes/auth.js",
-		"/Users/vitalihatalski/visual-feature/controllers/home.js",
-		"/Users/vitalihatalski/visual-feature/lib/utils.js",
-		"/Users/vitalihatalski/visual-feature/routes/project.js",
-		"/Users/vitalihatalski/visual-feature/test/test.js",
-		"/Users/vitalihatalski/visual-feature/test/model.js",
-		"/Users/vitalihatalski/visual-feature/test/home.js",
-		"/Users/vitalihatalski/visual-feature/test/controllers/home.js",
-		"/Users/vitalihatalski/visual-feature/lib/mongodb.js",
-		"/Users/vitalihatalski/visual-feature/lib/redis.js",
-		"/Users/vitalihatalski/visual-feature/model/redis.js",
-		"/Users/vitalihatalski/visual-feature/lib/logger.js",
-		"/Users/vitalihatalski/visual-feature/.router.swp",
-		"/Users/vitalihatalski/visual-feature/model/mongodb.js",
-		"/Users/vitalihatalski/visual-feature/utils/logger.js",
-		"/Users/vitalihatalski/visual-feature/utils/sources.js",
-		"/Users/vitalihatalski/visual-feature/appinit.js",
-		"/Users/vitalihatalski/visual-feature/node_modules/node-logentries/lib/logentries.js",
-		"/Users/vitalihatalski/visual-feature/app_old.js",
-		"/Users/vitalihatalski/visual-feature/views/dashboard_new.jade",
-		"/Users/vitalihatalski/visual-feature/redis.js",
-		"/Users/vitalihatalski/visual-feature/views/createproject.jade",
-		"/Users/vitalihatalski/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/Users/vitalihatalski/visual-feature/node_modules/github/api/v3.0.0/repos.js",
-		"/Users/vitalihatalski/visual-feature/node_modules/redis/examples/simple.js",
-		"/Users/vitalihatalski/visual-feature/model/usersRepository.js",
-		"/Users/vitalihatalski/visual-feature/public/css/site.css",
-		"/Users/vitalihatalski/visual-feature/node_modules/github/api/v3.0.0/pullRequests.js",
-		"/Users/vitalihatalski/visual-feature/public/css/dashboard.css",
-		"/Users/vitalihatalski/visual-feature/node_modules/github/error.js",
-		"/Users/vitalihatalski/visual-feature/views/marketing_layout.jade",
-		"/Users/vitalihatalski/visual-feature/model/db.js",
-		"/Users/vitalihatalski/visual-feature/README.md",
-		"/Users/vitalihatalski/visual-feature/docs/json-objects.json",
-		"/Users/vitalihatalski/visual-feature/node_modules/github/api/v3.0.0/user.js",
-		"/Users/vitalihatalski/visual-feature/node_modules/github/api/v3.0.0/userTest.js",
-		"/Users/vitalihatalski/visual-feature/node_modules/zombie/node_modules/request/node_modules/hawk/node_modules/sntp/test/index.js",
-		"/Users/vitalihatalski/visual-feature/node_modules/github/api/v3.0.0/routes.json",
+		"/Users/vitalihatalski/cloudcron/README.md",
+		"/Users/vitalihatalski/cloudcron/model/schema.js",
+		"/Users/vitalihatalski/cloudcron/config/app.json",
+		"/Users/vitalihatalski/cloudcron/lib/mongodb.js",
 		"/Users/vitalihatalski/visual-feature/docs/github-auth-object.json",
-		"/Users/vitalihatalski/visual-feature/docs/request-object.txt",
-		"/Users/vitalihatalski/visual-feature/docs/github_objects.txt",
-		"/Users/vitalihatalski/visual-feature/docs/REST-client.txt",
-		"/Users/vitalihatalski/visual-feature/routes/user.js",
-		"/Users/vitalihatalski/visual-feature/routes/github.js",
-		"/Users/vitalihatalski/Library/Application Support/Sublime Text 3/Packages/RESTer HTTP Client/RESTer.sublime-settings",
-		"/Users/vitalihatalski/Library/Application Support/Sublime Text 3/Packages/User/RESTer.sublime-settings",
-		"/Users/vitalihatalski/Library/Application Support/Sublime Text 3/Packages/Nodejs/Nodejs.sublime-settings",
-		"/Users/vitalihatalski/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
-		"/Users/vitalihatalski/Library/Application Support/Sublime Text 3/Packages/MacTerminal/Default.sublime-keymap",
-		"/Users/vitalihatalski/visual-feature/model/project.js",
-		"/Users/vitalihatalski/visual-feature/model/user.js",
-		"/Users/vitalihatalski/Downloads/299.5a90a49d9d3fc4844a4fb93791854e5917b7948e.sql",
-		"/Users/vitalihatalski/visual-feature/github_objects.txt",
-		"/Users/vitalihatalski/visual-feature/signin.js",
-		"/Users/vitalihatalski/visual-feature/model/users.js",
-		"/Users/vitalihatalski/visual-feature/repositories/usersRepository.js",
-		"/Users/vitalihatalski/visual-feature/node_modules/redis/README.md",
-		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/package.json",
-		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/node_modules/mongodb/package.json",
-		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/node_modules/mongodb/Readme.md",
-		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/views/index.jade",
-		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/maker.js",
-		"/Users/vitalihatalski/staging_logs.txt",
-		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/views/sc.jade",
-		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/views/layout.jade",
-		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/routes/user.js",
-		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/views/profile.jade",
-		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/creds/amazon-credentials.json",
-		"/Users/vitalihatalski/ServiceClick/ServiceChannel.Consumer.SQS/App.Deploy-Sandbox1.config",
-		"/Users/vitalihatalski/ServiceClick/ServiceChannel.Services.WebApi/Web.Deploy-Staging.config",
-		"/Users/vitalihatalski/visual-feature/LICENSE",
-		"/Users/vitalihatalski/visual-feature/routes/evnironments.js",
-		"/Users/vitalihatalski/xml integration procedure.sql"
+		"/Users/vitalihatalski/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/vitalihatalski/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/vitalihatalski/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/vitalihatalski/Library/Application Support/Sublime Text 3/Packages/User/JSON.sublime-settings",
+		"/Users/vitalihatalski/Library/Application Support/Sublime Text 3/Packages/User/Distraction Free.sublime-settings",
+		"/Users/vitalihatalski/cloudcron/.travis.yml",
+		"/Users/vitalihatalski/cloudcron/.elasticbeanstalk/optionsettings.dev-cloudcron",
+		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/routes/webhooks.js",
+		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/routes/sc.js",
+		"/Users/vitalihatalski/cloudcron/.elasticbeanstalk/config",
+		"/Users/vitalihatalski/cloudcron/apiary.apib",
+		"/Users/vitalihatalski/cloudcron/Dockerfile",
+		"/Users/vitalihatalski/cloudcron/.gitignore",
+		"/Users/vitalihatalski/cloudcron/Dockerrun.aws.json",
+		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/app.js",
+		"/Users/vitalihatalski/cloudcron/public/js/ember-sockets.min.js",
+		"/Users/vitalihatalski/sdapi/cookie.txt",
+		"/Users/vitalihatalski/dtest/Dockerfile",
+		"/Users/vitalihatalski/dtest/package.json",
+		"/Users/vitalihatalski/cloudcron/app.js",
+		"/Users/vitalihatalski/visual-feature/public/js/models/AppViewModel.js",
+		"/Users/vitalihatalski/visual-feature/app.js",
+		"/Users/vitalihatalski/cloudcron/views/index.html",
+		"/Users/vitalihatalski/dtest/app.js",
+		"/Users/vitalihatalski/Downloads/RunscopeAPITestingService.json",
+		"/Users/vitalihatalski/serviceclick/ScProcessingModules/SCFeedbackDispatcher/app.config",
+		"/Users/vitalihatalski/serviceclick/ScProcessingModules/SCFeedbackDispatcherService/App.config",
+		"/Users/vitalihatalski/serviceclick/ScProcessingModules/WalmartProposalApproval/app.config",
+		"/Users/vitalihatalski/serviceclick/ScProcessingModules/WalmartProposalApprovalService/App.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.AutoBilling.FillTaxRateProcess/App.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.Consumer.SQS/App.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.Consumer.SQS/App.Deploy-DEV.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.Consumer.SQS/App.Deploy-QA1.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.Consumer.SQS/App.Deploy-QA2.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.Consumer.SQS/App.Deploy-Sandbox1.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.Consumer.SQS/App.Deploy-Sandbox2.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.Consumer.SQS/App.Deploy-Staging.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.Consumer.SQS/App.Release.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.Consumer.SQS/Options.cs",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.ExcelReportsService/App.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.ExcelReportsService/App.Debug.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.ExcelReportsService/App.Deploy-DEV.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.ExcelReportsService/App.Deploy-QA1.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.ExcelReportsService/App.Deploy-QA2.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.ExcelReportsService/App.Deploy-Sandbox1.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.ExcelReportsService/App.Deploy-Sandbox2.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.ExcelReportsService/App.Deploy-Staging.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.ExcelReportsService/App.Release.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.FtpGraber.V1/App.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.Infrastructure.S3Client/App.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.Infrastructure/AmazonServices/AmazonServiceInitializer.cs",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.Infrastructure/AmazonServices/S3Storage/Configuration/S3StorageConfigurationSection.cs",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.Infrastructure/Logger/Configuration/LoggerConfigurationSectionHandler.cs",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.IssueListImporter/App.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.MailAgentAttachmentProcess/App.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.MailAgentSCAttachmentProcess/App.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.ProcessVerisae/App.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.ProviderRepliesProcessor/App.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.ProviderRepliesService/App.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.PunchOutProcessor/App.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.Services.AlertDispatcher/Web.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.Services.CheckPoint.OutgoingXml/Web.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.Services.ExcelReports/upload/upld.aspx",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.Services.ExcelReports/upload/upldLoc.aspx",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.Services.ExcelReports/upload/upldRfp.aspx",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.Services.IssueListConverter/Web.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.Services.ProviderRepliesProcessor/App.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.Services.WebApi/Web.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.Services.XmlIntegration.Proxy/Web.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.Specs/Saml/FakeConfigProvider.cs",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.UI.Admin.Web/Web.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.UI.CheckInOrOut.Web/Web.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.UI.ClassicAsp.Subscribers/reports/upload/upld.aspx",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.UI.ClassicAsp.Subscribers/reports/upload/upldLoc.aspx",
+		"/Users/vitalihatalski/serviceclick/ScProcessingModules/SCDispatchConfirmProcessService/App.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.UI.ClassicAsp.Subscribers/reports/upload/upldRfp.aspx",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.UI.ClassicAsp.Subscribers/Web.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.UI.DashBoard.Web/Web.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.UI.EasyPay.Web/Web.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.UI.EM.Web/Web.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.UI.EM.Web/Web.Deploy-DEV.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.UI.EM.Web/Web.Deploy-QA2.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.UI.EM.Web/Web.Deploy-Sandbox1.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.UI.EM.Web/Web.Deploy-Sandbox2.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.UI.EM.Web/Web.Deploy-Staging.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.UI.EM.Web/Web.Release.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.UI.InvoiceDisputeReviewPortal.Web/Web.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.UI.Login.Web/Web.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.UI.OAuth2.Authorization/Web.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.UI.PM.Web/Web.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.UI.PM.Web/Web.Deploy-QA2.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.Verisae/App.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.UI.PM.Web/Web.Deploy-Sandbox1.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.UI.SupplyClick.Web/Web.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.UI.PM.Web/Web.Deploy-Sandbox2.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.UI.RFP.Web/Web.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.UI.PM.Web/Web.Deploy-Staging.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.UI.Proposal.Web/Web.config",
+		"/Users/vitalihatalski/serviceclick/ServiceChannel.UI.PM.Web/Web.Release.config",
+		"/Users/vitalihatalski/serviceclick/ScProcessingModules/AccorReplyDispatcherService/App.config",
+		"/Users/vitalihatalski/serviceclick/ScProcessingModules/InvoiceAgent/SaleTaxValidation/app.config",
+		"/Users/vitalihatalski/serviceclick/ScProcessingModules/SCDispatchConfirmProcess/app.config",
+		"/Users/vitalihatalski/serviceclick/ScProcessingModules/AccorReplyDispatcher/App.config",
+		"/Users/vitalihatalski/serviceclick/edi/ServiceChannel.FtpGraber.exe.config",
+		"/Users/vitalihatalski/serviceclick/App.Deploy-DEV.config",
+		"/Users/vitalihatalski/ServiceClick/ServiceChannel.Services.WebApi/Web.config",
+		"/Users/vitalihatalski/serviceclick/App.config",
+		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/README.md",
+		"/Users/vitalihatalski/ServiceClick/ServiceChannel.UI.PM.Web/packages.config",
+		"/Users/vitalihatalski/ServiceClick/ServiceChannel.UI.OAuth2.Authorization/packages.config",
+		"/Users/vitalihatalski/ServiceClick/ServiceChannel.Services.WebApi/packages.config",
+		"/Users/vitalihatalski/ServiceChannel.OAuth.Client/node_modules/xml2js/README.md",
+		"/Users/vitalihatalski/cloudcron/public/css/application.css",
+		"/Users/vitalihatalski/cloudcron/bower_components/font-awesome/css/font-awesome.css",
+		"/Users/vitalihatalski/cloudcron/public/js/ember-app.js",
+		"/Users/vitalihatalski/cloudcron/node_modules/aws-sdk/README.md",
+		"/Users/vitalihatalski/cloudcron/node_modules/aws-sdk/doc-src/guide/node-intro.md",
+		"/Users/vitalihatalski/cloudcron/bower.json",
+		"/Users/vitalihatalski/cloudcron/post.html",
+		"/Users/vitalihatalski/cloudcron/node_modules/rrule/README.md",
+		"/Users/vitalihatalski/cloudcron/index.html",
+		"/Users/vitalihatalski/mongocourse/hw3-1/package.json",
+		"/Users/vitalihatalski/mongocourse/hw3-1/readme.txt"
 	],
 	"find":
 	{
@@ -749,6 +833,10 @@
 		"height": 93.0,
 		"where_history":
 		[
+			"/Users/vitalihatalski/visual-feature",
+			"/Users/vitalihatalski/serviceclick",
+			"/Users/vitalihatalski/cloudcron,-node_modules",
+			"/Users/vitalihatalski/visual-feature,-node_modules",
 			"/Users/vitalihatalski/visual-feature/routes",
 			"/Users/vitalihatalski/visual-feature,-node_modules,-public",
 			"/Users/vitalihatalski/visual-feature,-node_modules/,-public/",
@@ -764,6 +852,25 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"created",
+			"<",
+			"fixxbook",
+			"AKIAIGBRPATTMJ6X3GGA",
+			"CnVyHtrxsCyuAu0DP1RiNDzWS7zSUUb1XJYBMPAG",
+			"AKIAIGBRPATTMJ6X3GGA",
+			"AWS",
+			"AKIAIBTFF6DB3PMUYTUQ",
+			"google",
+			"Sofia Acey.jpg",
+			"Sofia",
+			"sofia",
+			".jpg",
+			"test",
+			"Acey.jpg",
+			"Sofia%20Acey.jpg",
+			"></",
+			"Sofia Acey.jpg",
+			"Sofia%20Acey.jpg",
 			"getQueryAndUrl",
 			"pathPrefix",
 			"util",
@@ -795,6 +902,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"MtWSKkWsQ1E02iQk4GW87B0yGNLi1d4UrireWZhI",
+			"AKIAIUIU74TSC2IVKQKQ",
 			"lib",
 			"\""
 		],
@@ -812,60 +921,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "public/js/ember-app.js",
+					"file": "views/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2976,
+						"buffer_size": 13039,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": "<",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								}
-							],
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7390,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								959,
-								959
+								1081,
+								1081
 							]
 						],
 						"settings":
@@ -893,24 +961,65 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "model/schema.js",
+					"buffer": 1,
+					"file": "app.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3258,
+						"buffer_size": 2263,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								320,
-								320
+								1769,
+								1769
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 430.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "routes/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3872,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								603,
+								603
 							]
 						],
 						"settings":
@@ -934,6 +1043,215 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "lib/config.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 570,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								180,
+								188
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "config/development.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 987,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "config/app.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1069,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								1069
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 5.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 921,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								921,
+								921
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "public/js/ember-app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4546,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1948,
+								1948
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 502.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -1019,7 +1337,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 174.0,
+	"side_bar_width": 176.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

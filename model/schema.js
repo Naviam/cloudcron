@@ -1,17 +1,19 @@
 var mongoose = require('mongoose');
 
-var task_types = 'ftp http zip s3 file execute'.split(' ');
+var task_types = 'execute email archive copy clean http'.split(' ');
+var auth_providers_enum = 'google microsoft yahoo github yammer amazon salesforce'.split(' ');
+var vc_providers_enum = 'github bitbucket'.split(' ');
+var freq_enum = 'YEARLY MONTHLY WEEKLY DAILY HOURLY MINUTELY SECONDLY'.split(' ');
+var wkst_enum = 'MO TU WE'.split(' ');
+var roles_enum = 'editor admin'.split(' ');
 
 var taskSchema = new mongoose.Schema({
 	name: String,
-	type: { type: String, enum: task_types }
+	type: { type: String, enum: task_types, required: true }
 });
 
-var freq_enum = 'YEARLY MONTHLY WEEKLY DAILY HOURLY MINUTELY SECONDLY'.split(' ');
-var wkst_enum = 'MO TU WE'.split(' ');
-
 var jobSchema = new mongoose.Schema({
-	name: String,
+	name: { type: String, required: true },
 	tags: [String],
 	rrule: { 
 		text: { type: String, required: true },
@@ -37,29 +39,52 @@ var jobSchema = new mongoose.Schema({
 	nextRun: Date,
 	isArchived: Boolean,
 	isActive: Boolean,
-	tasks: [taskSchema]
+	tasks: [taskSchema],
+	account: { type: mongoose.Schema.Types.ObjectId, ref: 'Account' }
 });
 
 mongoose.model('Job', jobSchema);
 
+var accountUserRoleSchema = new mongoose.Schema({
+	account: { type: mongoose.Schema.Types.ObjectId, ref: 'Account' },
+	role: { type: String, enum: roles_enum, default: 'editor' }
+});
+
+mongoose.model('AccountUserRole', accountUserRoleSchema);
+
 var accountSchema = new mongoose.Schema({
-	name: String,
-	created: {
-		on: { type: Date, default: Date.now },
-		by: { type: mongoose.Schema.Types.ObjectId, ref: 'User'}
-	},
+	name: { type: String, required: true },
+	createdOn: { type: Date, default: Date.now },
+	createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+	isArchived: { type: Boolean, default: false },
 	users: [userSchema],
-	jobs: [jobSchema]
+	usersCount: { type: Number, default: 0 },
+	jobs: [jobSchema],
+	jobsCount: { type: Number, default: 0 },
+	vc: {
+		provider: { type: String, enum: vc_providers_enum },
+		login: { type: String },
+		token: String,
+		organization: String,
+		repository: String,
+		branch: String
+	}
 });
 
 mongoose.model('Account', accountSchema);
 
 var userSchema = new mongoose.Schema({
 	_id: { type: String, lowercase: true, trim: true },
-	openId: { type: Number, index: true },
+	login: String,
 	password: String,
+	email: { type: String, lowercase: true, trim: true, unique: true, required: true },
+	firstName: String,
+	lastName: String,
 	createdOn: { type: Date, default: Date.now },
-	account: { type: mongoose.Schema.Types.ObjectId, ref: 'Account' }
+	provider: {
+		name: { type: String, enum: auth_providers_enum }
+	},
+	accounts: [accountUserRoleSchema]
 });
 
 mongoose.model('User', userSchema);

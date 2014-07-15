@@ -28,7 +28,9 @@ App.Router.map(function() {
   this.route('login');
   this.route('signup');
   this.route('upgrade', { path: '/upgrade' });
-  this.route('settings', { path: '/settings' });
+  this.resource('accounts', function() {
+      this.resource('account', { path: '/:account_id' });
+  });
   this.resource('jobs', function() {
     this.resource('job', { path: '/:job_id' });
   });
@@ -40,6 +42,25 @@ App.LoginController = Ember.Controller.extend(Ember.UserApp.FormControllerMixin)
 
 App.IndexController = Ember.ArrayController.extend({});
 
+App.AccountsController = Ember.ArrayController.extend({});
+App.AccountController = Ember.ObjectController.extend({
+  actions: {
+    createAccount: function() {
+      console.log('create account action');
+    }
+  }
+});
+App.AccountsRoute = Ember.Route.extend(Ember.UserApp.ProtectedRouteMixin, {
+  model: function() {
+    return this.store.findAll('account');
+  }
+});
+App.AccountsAccountRoute = Ember.Route.extend(Ember.UserApp.ProtectedRouteMixin, {
+  model: function(params) {
+    return this.store.find('account', params.account_id);
+  }
+});
+
 App.JobsContoller = Ember.ArrayController.extend({
 	sockets: {
 		newJob: function(job) {
@@ -48,21 +69,21 @@ App.JobsContoller = Ember.ArrayController.extend({
 			this.store.load(job);
 		},
 		// When EmberSockets makes a connection to the Socket.IO server.
-        connect: function() {
-            console.log('EmberSockets has connected...');
-        },
+    connect: function() {
+        console.log('EmberSockets has connected...');
+    },
 
-        // When EmberSockets disconnects from the Socket.IO server.
-        disconnect: function() {
-            console.log('EmberSockets has disconnected...');
-        }
+    // When EmberSockets disconnects from the Socket.IO server.
+    disconnect: function() {
+        console.log('EmberSockets has disconnected...');
+    }
 	}
 });
 
 App.JobController = Ember.ObjectController.extend({
   actions: {
     createJob: function() {
-      console.log('createjob');
+      console.log('create job action');
       //this.store.addObject(job);
       //this.socket.emit('newJob');
     }
@@ -96,7 +117,7 @@ App.JobsJobRoute = Ember.Route.extend(Ember.UserApp.ProtectedRouteMixin, {
 App.Job = DS.Model.extend({
   title: DS.attr('string'),
   rrule: DS.attr('string'),
-  createdDate: DS.attr('date'),
+  createdOn: DS.attr('date'),
   lastRun: DS.attr('date'),
   nextRun: DS.attr('date'),
   isArchived: DS.attr('boolean'),
@@ -105,12 +126,33 @@ App.Job = DS.Model.extend({
   // tasks: DS.hasMany('task', {async: true})
 });
 
+App.Account = DS.Model.extend({
+  name: DS.attr(),
+  createdOn: DS.attr('date'),
+  createdBy: DS.attr(),
+  githubOrg: DS.attr(),
+  githubRepo: DS.attr(),
+  githubBranch: DS.attr(),
+  isArchived: DS.attr('boolean'),
+  jobs: DS.hasMany('job', {async: true})
+});
+
+App.User = DS.Model.extend({
+  login: DS.attr(),
+  email: DS.attr(),
+  firstName: DS.attr(),
+  lastName: DS.attr(),
+  role: DS.attr(),
+  createdOn: DS.attr('date'),
+  account: DS.belongsTo('account')
+});
+
 App.Job.FIXTURES = [
   {
 	id: 1,
     title: 'American Signature',
     rrule: 'Weekly on Friday at 6am',
-    createdDate: new Date(),
+    createdOn: new Date(),
     lastRun: new Date("2014-04-11T06:00:00Z"),
     nextRun: new Date("2014-04-18T06:00:00Z"),
     isArchived: false,
@@ -120,7 +162,7 @@ App.Job.FIXTURES = [
 	id: 2,
     title: 'Push notifications',
     rrule: 'Every 3 minutes',
-    createdDate: new Date(),
+    createdOn: new Date(),
     lastRun: new Date("2014-04-30T14:01:23Z"),
     nextRun: new Date("2014-04-30T14:04:23Z"),
     isArchived: false,

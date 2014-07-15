@@ -3,9 +3,9 @@
 <head>
   <link href='/bower/bootstrap/dist/css/bootstrap.css' rel='stylesheet' />
   <link href='/bower/bootstrap-social/bootstrap-social.css' rel='stylesheet' />
-  <link href='/bower/bootcards/dist/css/bootcards-desktop.min.css' rel='stylesheet'>
+  <link href='/bower/bootcards/dist/css/bootcards-desktop.min.css' rel='stylesheet' />
   <link href='/css/application.css' rel='stylesheet' />
-  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href="/bower/font-awesome/css/font-awesome.css" rel="stylesheet" />
   <script src='/bower/jquery/dist/jquery.js'></script>
   <script src='/bower/bootstrap/dist/js/bootstrap.js'></script>
   <script src='/bower/handlebars/handlebars.js'></script>
@@ -43,7 +43,7 @@
           <ul class="nav navbar-nav">
             <li>{{#link-to 'jobs'}}Jobs{{/link-to}}</li>
             <li>{{#link-to 'upgrade'}}Upgrade Plan{{/link-to}}</li>
-            <li>{{#link-to 'settings'}}Settings{{/link-to}}</li>
+            <li>{{#link-to 'accounts'}}Settings{{/link-to}}</li>
             <li>
               {{#if user.authenticated}}
                   <a href="#" {{ action 'logout' }}>Log out</a>
@@ -101,9 +101,98 @@
     <h1>Upgrade plan!</h1>
     <p>This site would not be possible without the hardworking Ember Core Team!</p>
   </script>
-  <script type='text/x-handlebars' data-template-name='settings'>
-    <h1>Settings!</h1>
-    <p>This site would not be possible without the hardworking Ember Core Team!</p>
+  <script type='text/x-handlebars' data-template-name='accounts'>
+    <div class="row">
+      <div class="col-sm-4 bootcards-list">
+      
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <form>
+                <div class="row">
+                  <div class="col-xs-8">
+                    <h4>Accounts</h4>
+                  </div>
+                  <div class="col-xs-4">
+                    <button {{action 'createAccount'}} class='btn btn-success btn-block'><i class="fa fa-plus"></i> Account</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="list-group">
+              {{#each}}
+                {{#link-to 'account' this class="list-group-item"}}
+                  <h4 class="list-group-item-heading">{{name}}</h4>
+                  <p class="list-group-item-text">{{rrule}}</p>
+                {{/link-to}}
+              {{/each}}
+            </div>
+          </div>
+        
+      </div>
+      <div class="col-sm-8 bootcards-cards">
+      
+        {{outlet}}
+        
+      </div>
+    </div>
+  </script>
+  <script type='text/x-handlebars' data-template-name='account'>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <form>
+          <div class="row">
+            <div class="col-xs-8">
+              <h4>{{name}}</h4>
+            </div>
+            <div class="col-xs-4">
+              <button {{action 'createAccount'}} class='btn btn-warning btn-block'><i class="fa fa-minus"></i> Account</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading clearfix">
+        <h3 class="panel-title pull-left">GitHub Synchronization</h3>
+          <a class="btn btn-link pull-right" href="#">
+            Disconnect
+          </a>
+      </div>
+      <div class="panel-body">
+        <form>
+          <div class="row">
+            <h4>{{githubOrg}}/{{githubRepo}}</h4>
+          </div>
+          <div class="row">
+            <h4>{{name}} is syncing with {{githubBranch}} branch.</h4>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading clearfix">
+        <h3 class="panel-title pull-left">Users</h3>
+          <a class="btn btn-link pull-right" href="#">
+            Add User
+          </a>
+      </div>
+      <div class="list-group">
+        <a class="list-group-item pjax" href="/notes/id">
+          <i class="fa fa-phone fa-2x pull-left"></i>
+          <h4 class="list-group-item-heading">Email</h4>
+          <p class="list-group-item-text">email</p>
+        </a>
+        
+        <a class="list-group-item pjax" href="/notes/id">
+          <i class="fa fa-phone fa-2x pull-left"></i>
+          <h4 class="list-group-item-heading">Role</h4>
+          <p class="list-group-item-text">role</p>
+        </a>
+      </div>
+      <div class="panel-footer">
+        <small>Created on createdOn</small>
+      </div>
+    </div>
   </script>
   <script type='text/x-handlebars' data-template-name='jobs'>
     <div class="row">
@@ -222,10 +311,9 @@
               </div>
             </div>
           <div class="panel-footer">
-            <small>Created on {{createdDate}}</small>
+            <small>Created on {{createdOn}}</small>
           </div>
         </div>
-
   </script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

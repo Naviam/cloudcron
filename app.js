@@ -57,7 +57,7 @@ io.sockets.on('connection', function (socket) {
   socket.emit('newJob', {
     title: 'Test socket',
     rrule: 'Weekly on Friday at 6am',
-    createdDate: new Date(),
+    createdOn: new Date(),
     lastRun: new Date("2014-04-11T06:00:00Z"),
     nextRun: new Date("2014-04-18T06:00:00Z"),
     isArchived: false,

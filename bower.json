@@ -29,7 +29,8 @@
     "bootcards": "~0.1.0",
     "userapp-ember": "~1.3.2",
     "userapp": "~1.2.3",
-    "bootstrap-social": "~4.5.0"
+    "bootstrap-social": "~4.5.0",
+    "x-editable": "~1.5.1"
   },
   "devDependencies": {
     "qunit": "~1.14.0"

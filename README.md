@@ -28,3 +28,11 @@ https://fnd.io/
 
 - Information about emberjs: 
 http://emberwatch.com/
+
+API Documentation
+
+list all accounts
+curl -v http://localhost:3000/api/v1/accounts
+
+create account
+curl -d '{ "name": "CloudCron" }' -v http://localhost:3000/api/v1/accounts --header "Content-Type: application/json"

@@ -2,7 +2,51 @@ FORMAT: 1A
 HOST: http://www.cloudcron.com/api/v1
 
 # CloudCron API
-CloudCron API is an *enterprise strength cloud based cron service*. test123
+CloudCron API is an *enterprise strength cloud based cron service*.
+
+# Group Accounts
+Accounts related resources of the **CloudCron API**
+
+## Accounts Collection [/accounts]
+
+### List all Acounts [GET]
++ Response 200 (application/json)
+
+        [{
+            "id": "UHGYGUYGUYGUYUYGUY3432"
+            "name": "Personal"
+        },{
+            "id": "UHGYGUYGUYGUYUYGUY3433"
+            "name": "ServiceChannel"
+        },{
+            "id": "UHGYGUYGUYGUYUYGUY3434"
+            "name": "CloudCron"
+        }]
+
+### Create an Account [POST]
+
++ Request (application/json)
+
+        {
+            "name": "Your company name"
+        }
+
++ Response 201 (application/json)
+
+        { "id": "UHGYGUYGUYGUYUYGUY3436" }
+
+## Account [/accounts/{account-id}]
+A single Account object with all its details
+
++ Parameters
+    + account-id (required, number, `UHGYGUYGUYGUYUYGUY3436`) ... Numeric `account-id` of the Account to perform action with. Has example value.
+
+### Retrieve a Job [GET]
++ Response 200 (application/json)
+
+        {
+            "id": "UHGYGUYGUYGUYUYGUY3434"
+        }
 
 # Group Jobs
 Jobs related resources of the **CloudCron API**
